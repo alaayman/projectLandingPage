@@ -29,6 +29,7 @@ What i did
 - adding event listener to the ul to scroll programmatically to sections
   ps: doing that with the link href and using (scroll-behavior: smooth) in the css file is way more efficient but it was a challenge to do it through javascript
 
-- creating an event listener for document scroll and call addActiveClass to iterate through sections and add your-active-class to the one in the viewport
+- creating an event listener for document scroll and call addActiveClass to iterate through sections and add (your-active-class) to the one in the viewport
+- added feature to make nav elements active by dinamically adding class (menu__link__active__class) to link items when section in veiwport 
 
 I used some ideas and code guidance from https://www.w3schools.com/  and https://udacity.com
