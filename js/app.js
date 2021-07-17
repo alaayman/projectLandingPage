@@ -46,10 +46,13 @@ function createNavItems() {
 function addActiveClass() {
   for (const section of allSections) {
     const myPlace = section.getBoundingClientRect();
-    if (myPlace.top <= 200 && myPlace.top >= -436) {
+    const listItem = document.querySelector('a[href*="' + section.id + '"]');
+    if (myPlace.top <= 200 && myPlace.top >= -400) {
       section.classList.add("your-active-class");
+      listItem.classList.add("menu__link__active__class");
     } else {
       section.classList.remove("your-active-class");
+      listItem.classList.remove("menu__link__active__class");
     }
     // test placement
     // console.log(section.id + "  " + myPlace.top + " T " + myPlace.bottom + " B " + section.classList);
@@ -70,4 +73,4 @@ function clickedGoToAnchor(event) {
  */
 //start the magic and put the items in place
 createNavItems();
-document.addEventListener("scroll", addActiveClass);
+window.addEventListener("scroll", addActiveClass);

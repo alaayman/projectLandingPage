@@ -21,7 +21,7 @@ body {
   background: rgb(136, 203, 171);
   background: linear-gradient(
     0deg,
-    rgba(136, 203, 171, 1) 0%,
+    rgb(136, 203, 203) 0%,
     rgba(0, 13, 60, 1) 100%
   );
   margin: 0;
@@ -84,6 +84,7 @@ section {
 .navbar__menu li {
   display: inline-block;
   margin: 5px;
+  border-radius: 20px;
 }
 
 .navbar__menu .menu__link {
@@ -91,13 +92,17 @@ section {
   padding: 1em;
   font-weight: bold;
   text-decoration: none;
-/*
-* change style colors and element shape
-*/
-  font-size: 0.8em;
+  /* change style colors and element shape */
+  font-size: 1em;
   color: #fff;
   background: rgb(44, 50, 68);
   border-radius: 20px;
+}
+@media only screen and (max-width: 480px) {
+  .navbar__menu .menu__link {
+    padding: 0.7em;
+    font-size: 0.7em;
+  }
 }
 
 .navbar__menu .menu__link:hover {
@@ -105,6 +110,12 @@ section {
   color: rgb(0, 0, 0);
   transition: ease 0.3s all;
 
+  border-radius: 20px;
+}
+.navbar__menu .menu__link__active__class {
+  background: #fdfdfd;
+  color: #00f;
+  transition: ease 0.3s all;
   border-radius: 20px;
 }
 
@@ -227,7 +238,7 @@ section.your-active-class {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     0deg,
-    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.4) 0%,
     rgba(0, 0, 0, 0) 100%
   );
 }
